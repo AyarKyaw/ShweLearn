@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alumni Digital Pass - MIFFA</title>
+    <title>Alumni Digital Pass - Shwe Learn</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -45,7 +45,7 @@
                 <div class="h-4 w-px bg-slate-800"></div>
                 <div class="flex items-center gap-2.5">
                     <!-- Top Nav Logo -->
-                    <img src="{{ asset('assets/img/icon/miffas.png') }}" alt="MIFFA Logo" class="h-9 w-auto object-contain">
+                    <img src="{{ asset('assets/img/icon/miffas.png') }}" alt="Shwe Learn Logo" class="h-9 w-auto object-contain">
                     <span class="font-bold tracking-tight text-white text-sm">Alumni Portal</span>
                 </div>
             </div>
@@ -91,7 +91,7 @@
 
                 <h2 class="text-xl font-bold text-white tracking-tight">{{ $alumni->name }}</h2>
                 <p class="text-xs text-slate-400 font-medium mt-1 mb-6">
-                    <i class="fa-solid fa-graduation-cap text-blue-400 mr-1.5"></i>{{ $alumni->course->title ?? $alumni->course->name ?? 'MIFFA Education' }}
+                    <i class="fa-solid fa-graduation-cap text-blue-400 mr-1.5"></i>{{ $alumni->course->title ?? $alumni->course->name ?? 'Shwe Learn Education' }}
                 </p>
 
                 <!-- Status Pill -->
@@ -133,11 +133,11 @@
                         <!-- Card Header -->
                         <div class="flex items-center justify-between pb-6 border-b border-slate-200/80 relative z-10">
                             <div class="flex items-center gap-3.5">
-                                <!-- Digital Pass MIFFA Logo -->
-                                <img src="{{ asset('assets/img/icon/miffas.png') }}" alt="MIFFA Logo" class="h-12 w-auto object-contain">
+                                <!-- Digital Pass Shwe Learn Logo -->
+                                <img src="{{ asset('assets/img/icon/miffas.png') }}" alt="Shwe Learn Logo" class="h-12 w-auto object-contain">
                                 <div>
                                     <h2 class="text-base font-extrabold text-slate-900 tracking-wider uppercase leading-normal">
-                                        MIFFA Education Alumni
+                                        Shwe Learn Education Alumni
                                     </h2>
                                     <p class="text-[10px] font-bold text-blue-600 uppercase tracking-widest mt-0.5 leading-normal">
                                         Official Digital Credential
@@ -200,7 +200,7 @@
                     <!-- Card Footer Banner -->
                     <div class="bg-slate-900 px-8 py-4 flex items-center justify-between text-white relative z-10">
                         <div class="text-xs text-slate-400 font-medium space-y-1">
-                            <p class="leading-normal">www.miffa.org.mm</p>
+                            <p class="leading-normal">www.Shwe Learn.org.mm</p>
                             <p class="leading-normal">www.myanmarlogisticsinstitute.com</p>
                         </div>
                         

@@ -3,15 +3,15 @@
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <meta name="generator" content="MIFFA"/>
-    <meta name="description" content="MIFFA"/>
-    <title>@yield('title', 'MIFFA')</title>
+    <meta name="generator" content="Shwe Learn"/>
+    <meta name="description" content="Shwe Learn"/>
+    <title>@yield('title', 'Shwe Learn')</title>
     <meta property="og:type" content="website"/>
-    <meta property="og:title" content="Dashboard | MIFFA"/>
-    <meta property="og:description" content="MIFFA"/>
+    <meta property="og:title" content="Dashboard | Shwe Learn"/>
+    <meta property="og:description" content="Shwe Learn"/>
     <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:title" content="Dashboard | MIFFA"/>
-    <meta name="twitter:description" content="MIFFA"/>
+    <meta name="twitter:title" content="Dashboard | Shwe Learn"/>
+    <meta name="twitter:description" content="Shwe Learn"/>
     <meta name="theme-color" content="#4272d7"/>
     <link href="css/font-face.css" rel="stylesheet" media="all"/>
     <link rel="preconnect" href="https://rsms.me/"/>
@@ -62,7 +62,7 @@
 </nav>
 </header>
 <aside class="menu-sidebar" id="main-sidebar">
-  <div class="logo"><a class="logo-link" href="/dashboard/admins" aria-label="CoolAdmin home"><span class="logo-mark" aria-hidden="true">M</span><span class="logo-text">MIFFA</span></a>
+  <div class="logo"><a class="logo-link" href="/dashboard/admins" aria-label="CoolAdmin home"><span class="logo-mark" aria-hidden="true">M</span><span class="logo-text">Shwe Learn</span></a>
   <button class="sidebar-close js-sidebar-toggle" type="button" aria-label="Close navigation"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
 </div>
 <div class="menu-sidebar__content js-scrollbar1">

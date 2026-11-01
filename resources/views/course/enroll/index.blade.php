@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Enroll & Register - ' . $course->title . ' - MIFFA')
+@section('title', 'Enroll & Register - ' . $course->title . ' - Shwe Learn')
 
 @section('content')
 <!-- Start Breadcrumb -->
@@ -255,7 +255,7 @@
                             <!-- Membership Status & Member Code Section -->
                             <div class="row g-3 mb-4">
                                 <div class="col-md-6">
-                                    <label for="membership_status" class="form-label fw-semibold">MIFFA Membership <span class="text-danger">*</span></label>
+                                    <label for="membership_status" class="form-label fw-semibold">Shwe Learn Membership <span class="text-danger">*</span></label>
                                     <div class="input-group">
                                         <span class="input-group-text bg-white border-end-0 text-muted"><i class="fas fa-id-card"></i></span>
                                         <select class="form-select border-start-0 ps-0 @error('membership_status') is-invalid @enderror" id="membership_status" name="membership_status" required>
@@ -270,7 +270,7 @@
                                 </div>
 
                                 <div class="col-md-6" id="member_code_wrapper" style="{{ old('membership_status') == 'member' ? '' : 'display: none;' }}">
-                                    <label for="member_code" class="form-label fw-semibold">MIFFA Member Code <span class="text-danger">*</span></label>
+                                    <label for="member_code" class="form-label fw-semibold">Shwe Learn Member Code <span class="text-danger">*</span></label>
                                     <div class="input-group">
                                         <span class="input-group-text bg-white border-end-0 text-muted"><i class="fas fa-hashtag"></i></span>
                                         <input type="text" 
@@ -340,7 +340,7 @@
 
                         <ul class="list-unstyled text-muted small mb-0">
                             <li class="mb-2"><i class="fas fa-shield-alt text-success me-2"></i> Instant account activation</li>
-                            <li class="mb-2"><i class="fas fa-certificate text-success me-2"></i> MIFFA certification upon completion</li>
+                            <li class="mb-2"><i class="fas fa-certificate text-success me-2"></i> Shwe Learn certification upon completion</li>
                             <li><i class="fas fa-headset text-success me-2"></i> Direct course access</li>
                         </ul>
                     </div>

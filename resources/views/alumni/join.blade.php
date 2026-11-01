@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Join Alumni - MIFFA')
+@section('title', 'Join Alumni - Shwe Learn')
 
 @push('styles')
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css">
@@ -92,7 +92,7 @@
 
 <div class="alumni-hero text-center">
     <div class="container">
-        <h1 class="mb-3">Join the MIFFA Alumni Network</h1>
+        <h1 class="mb-3">Join the Shwe Learn Alumni Network</h1>
         <p class="mx-auto mb-0" style="max-width: 650px;">
             Create your alumni account to connect with peers and access exclusive member resources.
         </p>

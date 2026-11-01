@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', ($courseCategory->name ?? 'Courses') . ' - MIFFA')
+@section('title', ($courseCategory->name ?? 'Courses') . ' - Shwe Learn')
 
 @section('content')
 <!-- Start Breadcrumb -->

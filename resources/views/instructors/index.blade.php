@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Meet Our Expert Teachers - MIFFA')
+@section('title', 'Meet Our Expert Teachers - Shwe Learn')
 
 @section('content')
 <!-- Hero Section with Animated Soft Mesh & Grid Pattern -->
@@ -11,7 +11,7 @@
         <div class="row align-items-center">
             <div class="col-lg-8 mx-auto text-center">
                 <span class="badge bg-primary-subtle text-primary border border-primary-subtle fw-semibold px-3 py-2 rounded-pill mb-3 shadow-xs">
-                    <i class="fas fa-graduation-cap me-1"></i> MIFFA Faculty & Experts
+                    <i class="fas fa-graduation-cap me-1"></i> Shwe Learn Faculty & Experts
                 </span>
                 <h1 class="display-4 fw-black text-dark mb-3 tracking-tight">
                     Learn from Industry Leaders

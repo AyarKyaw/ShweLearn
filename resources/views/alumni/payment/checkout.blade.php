@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Alumni Membership Payment - MIFFA')
+@section('title', 'Alumni Membership Payment - Shwe Learn')
 
 @section('content')
 <!-- Outer Wrapper to push content below fixed header -->

@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Payment - ' . $course->title . ' - MIFFA')
+@section('title', 'Payment - ' . $course->title . ' - Shwe Learn')
 
 @section('content')
 <!-- Outer Wrapper to push content below fixed header -->

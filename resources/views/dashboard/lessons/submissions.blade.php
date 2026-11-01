@@ -1,6 +1,6 @@
 @extends('dashboard.layouts.master')
 
-@section('title', 'Homework Submissions - ' . $lesson->title . ' | MIFFA')
+@section('title', 'Homework Submissions - ' . $lesson->title . ' | Shwe Learn')
 
 @section('content')
 <main class="main-content" id="main-content">

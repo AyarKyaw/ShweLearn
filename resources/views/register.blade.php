@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- ========== Page Title ========== -->
-    <title>Register - MIFFA</title>
+    <title>Register - Shwe Learn</title>
 
     <!-- ========== CSRF Token ========== -->
     <meta name="csrf-token" content="{{ csrf_token() }}">

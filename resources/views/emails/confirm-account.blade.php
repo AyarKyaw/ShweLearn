@@ -11,7 +11,7 @@
 <body>
     <div class="card">
         <h2 style="color: #0d6efd; margin-top: 0;">Confirm Your Account</h2>
-        <p>Welcome to MIFFA! Click the button below to complete your registration and log in.</p>
+        <p>Welcome to Shwe Learn! Click the button below to complete your registration and log in.</p>
         <div style="text-align: center; margin: 25px 0;">
             <a href="{{ $confirmationUrl }}" class="btn">Confirm Email Address</a>
         </div>

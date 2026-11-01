@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Alumni Login - MIFFA')
+@section('title', 'Alumni Login - Shwe Learn')
 
 @push('styles')
 <style>
@@ -69,7 +69,7 @@
     <div class="container">
         <h1 class="mb-3">Welcome Back</h1>
         <p class="mx-auto mb-0" style="max-width: 650px;">
-            Sign in to access your MIFFA Alumni account and network directory.
+            Sign in to access your Shwe Learn Alumni account and network directory.
         </p>
     </div>
 </div>

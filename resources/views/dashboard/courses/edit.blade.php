@@ -1,6 +1,6 @@
 @extends('dashboard.layouts.master')
 
-@section('title', 'Edit Course - MIFFA')
+@section('title', 'Edit Course - Shwe Learn')
 
 @section('content')
 <main class="main-content" id="main-content">

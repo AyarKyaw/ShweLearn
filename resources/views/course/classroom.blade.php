@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', ($currentLesson ? $currentLesson->section->title : $course->title) . ' - MIFFA Learning Room')
+@section('title', ($currentLesson ? $currentLesson->section->title : $course->title) . ' - Shwe Learn Learning Room')
 
 @section('content')
 

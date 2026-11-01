@@ -9,13 +9,13 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="MIFFA Teacher Portal">
+    <meta name="description" content="Shwe Learn Teacher Portal">
 
 
     {{-- Page Title --}}
 
     <title>
-        @yield('title', 'Teacher Dashboard | MIFFA')
+        @yield('title', 'Teacher Dashboard | Shwe Learn')
     </title>
 
 
@@ -610,7 +610,7 @@
                         class="teacher-sidebar-brand text-decoration-none"
                     >
 
-                        🎓 MIFFA
+                        🎓 Shwe Learn
 
                     </a>
 

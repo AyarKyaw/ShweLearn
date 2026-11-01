@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'About Us - MIFFA')
+@section('title', 'About Us - Shwe Learn')
 
 @section('content')
     <!-- Start Breadcrumb 

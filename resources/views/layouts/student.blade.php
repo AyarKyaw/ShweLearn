@@ -10,13 +10,13 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="MIFFA">
+    <meta name="description" content="Shwe Learn">
 
 
     <!-- ========== Page Title ========== -->
 
     <title>
-        @yield('title', 'Student Dashboard | MIFFA')
+        @yield('title', 'Student Dashboard | Shwe Learn')
     </title>
 
 
@@ -1217,7 +1217,7 @@
                         class="sidebar-brand text-decoration-none"
                     >
 
-                        🎓 MIFFA ACADEMY
+                        🎓 Shwe Learn ACADEMY
 
                     </a>
 
@@ -1380,7 +1380,7 @@
 
                             <small class="text-muted">
 
-                                {{ auth()->user()->email ?? 'student@miffa.com' }}
+                                {{ auth()->user()->email ?? 'student@Shwe Learn.com' }}
 
                             </small>
 
@@ -1497,7 +1497,7 @@
 
 
 <!-- =====================================================
-     ORIGINAL MIFFA VALIDNAVS MOBILE MENU
+     ORIGINAL Shwe Learn VALIDNAVS MOBILE MENU
 ====================================================== -->
 
 <nav
@@ -1540,7 +1540,7 @@
                     <img
                         src="{{ asset('assets/img/new/logo-light.png') }}"
                         class="logo"
-                        alt="MIFFA"
+                        alt="Shwe Learn"
                     >
 
                 </a>
@@ -1568,7 +1568,7 @@
 
                 <img
                     src="{{ asset('assets/img/new/logo-light.png') }}"
-                    alt="MIFFA"
+                    alt="Shwe Learn"
                 >
 
 

@@ -7,14 +7,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="MIFFA">
+    <meta name="description" content="Shwe Learn">
 
 
 <!-- ========== Page Title ========== -->
-<title>@yield('title', 'MIFFA')</title>
+<title>@yield('title', 'Shwe Learn')</title>
 
 <!-- ========== Favicon Icon ========== -->
-<link rel="shortcut icon" href="{{ asset('assets/img/icon/miffas.png') }}" type="image/x-icon">
+<link rel="shortcut icon" href="{{ asset('assets/img/icon/Shwe Learns.png') }}" type="image/x-icon">
 
 <!-- ========== Font Awesome CDN ========== -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -550,16 +550,16 @@
                 <ul class="item-flex">
 
                     <li>
-                        <a href="tel:+09268002226">
+                        <a href="tel:+095056924">
                             <img src="{{ asset('assets/img/icon/2.png') }}" alt="Icon">
-                            Phone: 09268002226
+                            Phone: 095056924
                         </a>
                     </li>
 
                     <li>
-                        <a href="mailto:info@miffa.org">
+                        <a href="mailto:info.itplusmm@gmail.com">
                             <img src="{{ asset('assets/img/icon/3.png') }}" alt="Icon">
-                            Email: info@miffa.org
+                            Email: info.itplusmm@gmail.com
                         </a>
                     </li>
 
@@ -674,9 +674,9 @@
 
                     <a class="navbar-brand" href="{{ url('/') }}">
 
-                        <img src="{{ asset('assets/img/new/logo-light.png') }}"
+                        <!-- <img src="{{ asset('assets/img/new/logo-light.png') }}"
                             class="logo"
-                            alt="Logo">
+                            alt="Logo"> -->
 
                     </a>
 
@@ -690,8 +690,8 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-menu">
 
-                    <img src="{{ asset('assets/img/new/logo-light.png') }}"
-                        alt="Logo">
+                    <!-- <img src="{{ asset('assets/img/new/logo-light.png') }}"
+                        alt="Logo"> -->
 
                     <button type="button"
                         class="navbar-toggle"
@@ -891,13 +891,13 @@
 
                         <div class="footer-logo">
 
-                            <img src="{{ asset('assets/img/new/logo-light.png') }}"
-                                alt="Image Not Found">
+                            <!-- <img src="{{ asset('assets/img/new/logo-light.png') }}"
+                                alt="Image Not Found"> -->
 
                         </div>
 
                         <p>
-                            Myanmar International Freight Forwarders' Association Education & Training Institute.
+                           SHWE LEARN is an online learning platform dedicated to providing accessible, practical, and high-quality education. We empower learners to develop new skills, expand their knowledge, and achieve their personal and professional goals.
                         </p>
 
                     </div>
@@ -969,8 +969,8 @@
 
                                 <div class="info">
                                     <h5>
-                                        <a href="tel:+09268002226">
-                                            09268002226
+                                        <a href="tel:+095056924">
+                                            095056924
                                         </a>
                                     </h5>
                                 </div>
@@ -985,8 +985,8 @@
 
                                 <div class="info">
                                     <h5>
-                                        <a href="mailto:info@miffa.org">
-                                            info@miffa.org
+                                        <a href="mailto:info.itplusmm@gmail.com">
+                                            info.itplusmm@gmail.com
                                         </a>
                                     </h5>
                                 </div>
@@ -1015,14 +1015,14 @@
                 <div class="col-lg-6">
 
                     <p>
-                        &copy; {{ date('Y') }} MIFFA. All Rights Reserved.
+                        &copy; {{ date('Y') }} Shwe Learn. All Rights Reserved.
                     </p>
 
                 </div>
 
                 <div class="col-lg-6 text-end">
 
-                    <ul>
+                    <!-- <ul>
 
                         <li>
                             <a href="#">
@@ -1036,7 +1036,7 @@
                             </a>
                         </li>
 
-                    </ul>
+                    </ul> -->
 
                 </div>
 

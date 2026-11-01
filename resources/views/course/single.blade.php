@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', ($course->title ?? 'Course Details') . ' - MIFFA')
+@section('title', ($course->title ?? 'Course Details') . ' - Shwe Learn')
 @push('styles')
 <style>
     .course-single-meta .teachers-item {
@@ -150,12 +150,12 @@
                 <div class="thumb">
                     <img
                         src="{{ asset('assets/img/team/default.jpg') }}"
-                        alt="MIFFA Teacher"
+                        alt="Shwe Learn Teacher"
                     >
                 </div>
 
                 <div class="desc">
-                    <span>MIFFA Teacher</span>
+                    <span>Shwe Learn Teacher</span>
                 </div>
 
             </div>

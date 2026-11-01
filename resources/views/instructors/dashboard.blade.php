@@ -1,6 +1,6 @@
 @extends('layouts.teacher')
 
-@section('title', 'Teacher Dashboard - MIFFA')
+@section('title', 'Teacher Dashboard - Shwe Learn')
 
 @section('content')
 

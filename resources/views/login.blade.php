@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- ========== Page Title ========== -->
-    <title>MIFFA - Login</title>
+    <title>Shwe Learn - Login</title>
 
     <!-- ========== CSRF Token ========== -->
     <meta name="csrf-token" content="{{ csrf_token() }}">

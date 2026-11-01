@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Home - MIFFA')
+@section('title', 'Home - Shwe Learn')
 @push('styles')
 <style>
     /* Force Swiper slides to stretch equal heights */
@@ -289,7 +289,7 @@
                             <!-- Single Item -->
                             <div class="swiper-slide">
                                 <div class="category-style-two-item wow fadeInUp">
-                                    <a href="{{ url('/courses?category=' . ($courseCategory->slug ?? $courseCategory->id)) }}">
+                                    <a href="{{ url('/courses?category=' . (isset($courseCategory) ? ($courseCategory->slug ?? $courseCategory->id) : '')) }}">
                                         <div class="info">
                                             <h4>Freight <strong>Forwarding</strong></h4>
                                             <span>12 Courses</span>

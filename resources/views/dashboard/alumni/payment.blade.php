@@ -1,7 +1,7 @@
 {{-- resources/views/dashboard/alumni-payments/index.blade.php --}}
 @extends('dashboard.layouts.master')
 
-@section('title', 'Alumni Payments - MIFFA')
+@section('title', 'Alumni Payments - Shwe Learn')
 
 @section('content')
 <main class="main-content" id="main-content">

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>MIFFA - Teacher Login</title>
+    <title>Shwe Learn - Teacher Login</title>
 
     <link rel="shortcut icon" href="{{ asset('assets/img/new/logo-light.png') }}" type="image/x-icon">
 
@@ -43,7 +43,7 @@
                         <div class="login-register-items text-light">
 
                             <h2>Teacher Portal</h2>
-                            <p>MIFFA Teacher Access</p>
+                            <p>Shwe Learn Teacher Access</p>
 
                             <!-- Success Alert -->
                             @if (session('success'))

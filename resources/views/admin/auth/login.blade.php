@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- ========== Page Title ========== -->
-    <title>MIFFA - Admin Login</title>
+    <title>Shwe Learn - Admin Login</title>
 
     <!-- ========== Favicon Icon ========== -->
     <link rel="shortcut icon" href="{{ asset('assets/img/new/logo-light.png') }}" type="image/x-icon">
@@ -42,7 +42,7 @@
                     <div class="col-xl-5 col-lg-6">
                         <div class="login-register-items text-light">
                             <h2>Admin Portal</h2>
-                            <p>MIFFA Administration Access</p>
+                            <p>Shwe Learn Administration Access</p>
 
                             <!-- Success Alert -->
                             @if (session('success'))

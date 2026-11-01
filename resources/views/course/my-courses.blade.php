@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'My Enrolled Courses - MIFFA')
+@section('title', 'My Enrolled Courses - Shwe Learn')
 
 @section('content')
 <div class="container py-5 my-5 position-relative z-1">

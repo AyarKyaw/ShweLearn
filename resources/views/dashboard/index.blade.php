@@ -1,6 +1,6 @@
 @extends('dashboard.layouts.master')
 
-@section('title', 'Dashboard - MIFFA')
+@section('title', 'Dashboard - Shwe Learn')
 
 @section('content')
       <div class="page-container">
