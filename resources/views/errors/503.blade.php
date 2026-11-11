@@ -218,10 +218,10 @@
 
         <div class="brand">
 
-            <img
+            <!-- <img
                 src="{{ asset('assets/img/miffa-logo.png') }}"
                 alt="MIFFA"
-            >
+            > -->
 
         </div>
 
