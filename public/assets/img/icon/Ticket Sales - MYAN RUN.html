@@ -1,0 +1,1465 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)https://test-myanrun.itplus.net.mm/ticket?event=Bagan+Marathon+2026 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Ticket Sales - MYAN RUN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="csrf-token" content="xIQC9GsjvDkAvaXxdMky1ajIulK3FbJP2KrkoHhn">
+
+    <style>
+/* ===============================
+   COUNTDOWN
+================================ */
+.box-events-slide {
+    position: relative; /* make this container the reference point */
+    padding-top: 40px;  /* optional, to give space for logo */
+}
+
+.box-events-slide .logo-event {
+    position: absolute;
+    top: -130px;      /* moves logo above the top of the box */
+    left: 50%;       /* center horizontally */
+    transform: translateX(-50%); /* perfect horizontal centering */
+    z-index: 10;     /* make sure it stays on top of other elements */
+}
+
+.box-events-slide .logo-event img {
+    width: 200px;     /* adjust logo size as needed */
+    height: auto;
+}
+
+
+.marathon-countdown {
+    padding: 40px 0;
+    text-align: center;
+}
+.logo-event img {
+    max-width: 200px; /* adjust size */
+    height: auto;
+}
+/* ===============================
+   MODAL LAYOUT
+================================ */
+.modal-dialog {
+    max-width: 500px !important;;
+}
+
+.marathon-modal {
+    border-radius: 25px !important;
+    overflow: hidden;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    padding: 0 !important;
+}
+
+.marathon-text h4 {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    text-align: center;
+    color: #C3E92D;
+    margin-bottom: 12px;
+}
+
+.primary-text {
+    font-weight: 600;            
+    font-size: 20px;
+    color: #111;
+    text-align: center;
+}
+
+.marathon-text p strong {
+    font-weight: 400;
+    text-align: justify;
+}
+
+
+.marathon-text,
+.marathon-image {
+    width: 100%;
+}
+
+/* Horizontal layout */
+.marathon-body {
+    display: flex;
+    min-height: 360px;
+    flex-direction: column;
+}
+
+/* Close button */
+.marathon-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 10;
+}
+
+/* LEFT: Text */
+.marathon-text {
+    padding: 32px;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Inter", sans-serif;
+}
+
+/* RIGHT: Image */
+.marathon-image {
+    width: 100%;
+    background: #000;
+}
+
+.marathon-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: rgba(0,0,0,0.5);
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.video-overlay:hover {
+    background: rgba(0,0,0,0.7);
+}
+
+/* ===============================
+   COUNTDOWN LINE
+================================ */
+
+.countdown-title {
+    font-size: 60px;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.countdown-subtitle {
+    font-size: 20px;
+    color: #bbbbbb;
+    margin-bottom: 40px;
+}
+
+.countdown-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 36px;
+    font-weight: 500;
+    color: #dddddd;
+    background-color: #121212;
+    padding: 50px 0;
+}
+
+.countdown-line strong {
+    font-size: 64px;
+    font-weight: 900;
+    color: #ffffff;
+}
+
+.separator {
+    font-size: 48px;
+    color: #888888;
+}
+
+/* ===============================
+   PRELOADER
+================================ */
+.preload-container {
+    position: fixed;
+    inset: 0;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+}
+
+.loader-gif {
+    width: 180px;
+    max-width: 60vw;
+    height: auto;
+}
+
+/* ===============================
+   MOBILE FIX (IMPORTANT)
+================================ */
+@media (max-width: 768px) {
+
+    /* Modal stacks vertically */
+    .marathon-body {
+        flex-direction: column;
+    }
+
+    .marathon-text,
+    .marathon-image {
+        width: 100%;
+    }
+
+    .marathon-image {
+        height: 100%;
+    }
+
+    .marathon-image img {
+        width: 100%;
+        height: 100%; /* 🔥 VERY IMPORTANT */
+        object-fit: cover;
+        display: block;
+    }
+
+    /* Countdown responsive */
+    .countdown-title {
+        font-size: 36px;
+    }
+
+    .countdown-subtitle {
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+
+    .countdown-line {
+        font-size: 20px;
+        gap: 12px;
+    }
+
+    .countdown-line strong {
+        font-size: 36px;
+    }
+
+    .separator {
+        font-size: 28px;
+    }
+}
+
+.address {
+    font-family: Arial, sans-serif;
+}
+
+.address p {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-numbers {
+    display: flex;
+    gap: 20px; /* spacing between numbers */
+    align-items: center;
+}
+
+/* 1. Target the header and ensure it sits above content but below modals */
+#header, 
+.header, 
+.header-sticky #header, {
+    position: fixed; /* or sticky depending on your theme */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000 !important; /* Above .item (usually 1-10) but below Modal (1050) */
+}
+
+/* 2. Ensure the Modal is always higher than the header */
+.modal {
+    z-index: 1060 !important; 
+}
+
+/* 3. Ensure the darkened background (backdrop) is also above the header */
+.modal-backdrop {
+    z-index: 1050 !important;
+}
+
+.contact-numbers span,
+.contact-numbers a span {
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.contact-numbers span:hover,
+.contact-numbers a span:hover {
+    color: #C3E92D; /* change to your desired color on hover */
+}
+
+.phone-link {
+    color: inherit;          /* same color as text */
+    text-decoration: none;   /* remove underline */
+    font-weight: inherit;
+}
+
+.phone-link:hover,
+.phone-link:focus,
+.phone-link:active {
+    color: #C3E92D;          /* change this to any color you want */
+}
+
+.contact-link {
+    color: inherit;          /* same text color */
+    text-decoration: none;   /* no underline */
+    font-weight: inherit;
+}
+
+.contact-link:hover,
+.contact-link:focus,
+.contact-link:active {
+    color: #C3E92D;          /* change to any color you want */
+}
+
+/* Hide mobile-specific menu items on Desktop */
+@media (min-width: 992px) {
+    .mobile-only-menu {
+        display: none !important;
+    }
+}
+
+/* Ensure the modal is always on top of the nav */
+.modal {
+    z-index: 10001 !important;
+}
+.modal-backdrop {
+    z-index: 10000 !important;
+}
+
+/* Style the asterisk in the menu */
+.menu li a span {
+    font-weight: bold;
+}
+
+      /* ===============================
+   PRELOADER
+================================ */
+.preload-container {
+    position: fixed;
+    inset: 0;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+}
+
+.loader-gif {
+    width: 180px;
+    max-width: 60vw;
+    height: auto;
+}
+
+.contact-numbers {
+    display: flex;
+    gap: 20px; /* spacing between numbers */
+    align-items: center;
+}
+
+.contact-numbers span,
+.contact-numbers a span {
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.contact-numbers span:hover,
+.contact-numbers a span:hover {
+    color: #C3E92D; /* change to your desired color on hover */
+}
+
+.tab-btn{
+    background:#eee;
+    border:none;
+    padding:10px 25px;
+    margin:5px;
+    font-size:16px;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+.tab-btn.active{
+    background:#ff5a00;
+    color:#fff;
+}
+
+.tab-content{
+    display:none;
+}
+
+.tab-content.active{
+    display:block;
+}
+
+.pdf-preview img{
+    width:100%;
+    margin-bottom:20px;
+    border-radius:10px;
+}
+</style>
+    <link rel="stylesheet" type="text/css" href="./Ticket Sales - MYAN RUN_files/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./Ticket Sales - MYAN RUN_files/style.css">
+    <link rel="stylesheet" type="text/css" href="./Ticket Sales - MYAN RUN_files/responsive.css">
+    <link rel="stylesheet" type="text/css" href="./Ticket Sales - MYAN RUN_files/color1.css" id="colors">
+    <link rel="stylesheet" type="text/css" href="./Ticket Sales - MYAN RUN_files/swiper-bundle.min.css">
+
+    <link href="https://test-myanrun.itplus.net.mm/images/icon/Myan%20Run%20icon.png" rel="apple-touch-icon-precomposed" sizes="48x48">
+    <link href="https://test-myanrun.itplus.net.mm/images/icon/Myan%20Run%20icon.png" rel="apple-touch-icon-precomposed">
+    <link href="https://test-myanrun.itplus.net.mm/images/icon/Myan%20Run%20icon.png" rel="shortcut icon">
+    <link rel="icon" type="image/x-icon" href="https://test-myanrun.itplus.net.mm/images/icon/Myan%20Run%20icon.png">
+    <script src="./Ticket Sales - MYAN RUN_files/saved_resource"></script>
+<link rel="stylesheet" href="./Ticket Sales - MYAN RUN_files/all.min.css">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+
+    #ticket-page-scope {
+        font-family: 'Plus Jakarta Sans', sans-serif !important;
+        background-color: #F8FAFC;
+    }
+
+    .ticket-card { 
+        position: relative !important;
+        overflow: hidden !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;      
+        justify-content: flex-end !important; 
+        padding-bottom: 3rem !important;      
+        transition: all 0.5s ease !important;
+        cursor: pointer !important;
+        border-radius: 32px !important;
+        min-height: 580px !important; 
+        border: 4px solid transparent !important;
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+        width: 100% !important;
+    }
+
+    .ticket-card::before {
+        content: '' !important;
+        position: absolute !important;
+        inset: 0 !important;
+        background: linear-gradient(to top, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0) 60%) !important;
+        transition: opacity 0.5s !important;
+        opacity: 0.8 !important;
+        z-index: 1 !important;
+    }
+    
+    .ticket-card.active { 
+        border-color: #C3E92D !important;
+        transform: translateY(-10px) !important;
+        box-shadow: 0 25px 50px -12px rgba(195, 233, 45, 0.4) !important;
+    }
+
+    .price-tag { 
+        position: relative !important;
+        z-index: 10 !important;
+        color: #ffffff !important;
+        font-weight: 900 !important;
+        font-size: 3rem !important; 
+        text-align: center !important;
+        letter-spacing: -0.05em !important;
+        transition: all 0.3s ease !important;
+    }
+
+    .ticket-card.active .price-tag {
+        color: #C3E92D !important;
+        transform: scale(1.05) !important;
+    }
+
+    .category-badge { 
+        position: absolute !important;
+        top: 2rem !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        white-space: nowrap !important;
+        padding: 0.5rem 1.25rem !important;
+        border-radius: 9999px !important;
+        font-size: 12px !important;
+        font-weight: 900 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.1em !important;
+        z-index: 10 !important;
+        color: white !important;
+        border: 1px solid rgba(255, 255, 255, 0.3) !important;
+        backdrop-filter: blur(12px) !important;
+    }
+
+    .ticket-card.active .category-badge {
+        background-color: #C3E92D !important;
+        color: #0f172a !important;
+        border-color: #C3E92D !important;
+    }
+
+    .content-wrapper {
+        padding-top: 100px;
+    }
+</style>
+ 
+<script id="browser-logger-active">
+(function() {
+    const ENDPOINT = 'https://test-myanrun.itplus.net.mm/_boost/browser-logs';
+    const logQueue = [];
+    let flushTimeout = null;
+
+    console.log('🔍 Browser logger active (MCP server detected). Posting to: ' + ENDPOINT);
+
+    // Store original console methods
+    const originalConsole = {
+        log: console.log,
+        info: console.info,
+        error: console.error,
+        warn: console.warn,
+        table: console.table
+    };
+
+    // Helper to safely stringify values
+    function safeStringify(obj) {
+        const seen = new WeakSet();
+        return JSON.stringify(obj, (key, value) => {
+            if (typeof value === 'object' && value !== null) {
+                if (seen.has(value)) return '[Circular]';
+                seen.add(value);
+            }
+            if (value instanceof Error) {
+                return {
+                    name: value.name,
+                    message: value.message,
+                    stack: value.stack
+                };
+            }
+            return value;
+        });
+    }
+
+    // Batch and send logs
+    function flushLogs() {
+        if (logQueue.length === 0) return;
+
+        const batch = logQueue.splice(0, logQueue.length);
+
+        fetch(ENDPOINT, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-Requested-With': 'XMLHttpRequest'
+            },
+            body: JSON.stringify({ logs: batch })
+        }).catch(err => {
+            // Silently fail to avoid infinite loops
+            originalConsole.error('Failed to send logs:', err);
+        });
+    }
+
+    // Debounced flush (100ms)
+    function scheduleFlush() {
+        if (flushTimeout) clearTimeout(flushTimeout);
+        flushTimeout = setTimeout(flushLogs, 100);
+    }
+
+    // Intercept console methods
+    ['log', 'info', 'error', 'warn', 'table'].forEach(method => {
+        console[method] = function(...args) {
+            // Call original method
+            originalConsole[method].apply(console, args);
+
+            // Capture log data
+            try {
+                logQueue.push({
+                    type: method,
+                    timestamp: new Date().toISOString(),
+                    data: args.map(arg => {
+                        try {
+                            return typeof arg === 'object' ? JSON.parse(safeStringify(arg)) : arg;
+                        } catch (e) {
+                            return String(arg);
+                        }
+                    }),
+                    url: window.location.href,
+                    userAgent: navigator.userAgent
+                });
+
+                scheduleFlush();
+            } catch (e) {
+                // Fail silently
+            }
+        };
+    });
+
+    // Global error handlers for uncaught errors
+    const originalOnError = window.onerror;
+    window.onerror = function boostErrorHandler(errorMsg, url, lineNumber, colNumber, error) {
+        try {
+            logQueue.push({
+                type: 'uncaught_error',
+                timestamp: new Date().toISOString(),
+                data: [{
+                    message: errorMsg,
+                    filename: url,
+                    lineno: lineNumber,
+                    colno: colNumber,
+                    error: error ? {
+                        name: error.name,
+                        message: error.message,
+                        stack: error.stack
+                    } : null
+                }],
+                url: window.location.href,
+                userAgent: navigator.userAgent
+            });
+
+            scheduleFlush();
+        } catch (e) {
+            // Fail silently
+        }
+
+        // Call original handler if it exists
+        if (originalOnError && typeof originalOnError === 'function') {
+            return originalOnError(errorMsg, url, lineNumber, colNumber, error);
+        }
+
+        // Let the error continue to propagate
+        return false;
+    }
+    window.addEventListener('error', (event) => {
+        try {
+            logQueue.push({
+                type: 'window_error',
+                timestamp: new Date().toISOString(),
+                data: [{
+                    message: event.message,
+                    filename: event.filename,
+                    lineno: event.lineno,
+                    colno: event.colno,
+                    error: event.error ? {
+                        name: event.error.name,
+                        message: event.error.message,
+                        stack: event.error.stack
+                    } : null
+                }],
+                url: window.location.href,
+                userAgent: navigator.userAgent
+            });
+
+            scheduleFlush();
+        } catch (e) {
+            // Fail silently
+        }
+
+        // Let the error continue to propagate
+        return false;
+    });
+    window.addEventListener('unhandledrejection', (event) => {
+        try {
+            logQueue.push({
+                type: 'error',
+                timestamp: new Date().toISOString(),
+                data: [{
+                    message: 'Unhandled Promise Rejection',
+                    reason: event.reason instanceof Error ? {
+                        name: event.reason.name,
+                        message: event.reason.message,
+                        stack: event.reason.stack
+                    } : event.reason
+                }],
+                url: window.location.href,
+                userAgent: navigator.userAgent
+            });
+
+            scheduleFlush();
+        } catch (e) {
+            // Fail silently
+        }
+
+        // Let the rejection continue to propagate
+        return false;
+    });
+
+    // Flush on page unload
+    window.addEventListener('beforeunload', () => {
+        if (logQueue.length > 0) {
+            navigator.sendBeacon(ENDPOINT, JSON.stringify({ logs: logQueue }));
+        }
+    });
+})();
+</script>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.container{width:100%}@media (min-width: 640px){.container{max-width:640px}}@media (min-width: 768px){.container{max-width:768px}}@media (min-width: 1024px){.container{max-width:1024px}}@media (min-width: 1280px){.container{max-width:1280px}}@media (min-width: 1536px){.container{max-width:1536px}}.mx-auto{margin-left:auto;margin-right:auto}.mb-0{margin-bottom:0px}.mb-16{margin-bottom:4rem}.mb-2{margin-bottom:0.5rem}.mb-8{margin-bottom:2rem}.mt-16{margin-top:4rem}.mt-4{margin-top:1rem}.flex{display:flex}.grid{display:grid}.h-16{height:4rem}.w-16{width:4rem}.w-full{width:100%}.max-w-5xl{max-width:64rem}.max-w-md{max-width:28rem}.flex-1{flex:1 1 0%}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-10{gap:2.5rem}.gap-12{gap:3rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.rounded-2xl{border-radius:1rem}.rounded-\[1\.5rem\]{border-radius:1.5rem}.rounded-\[2rem\]{border-radius:2rem}.rounded-\[40px\]{border-radius:40px}.rounded-full{border-radius:9999px}.bg-\[\#C3E92D\]{--tw-bg-opacity:1;background-color:rgb(195 233 45 / var(--tw-bg-opacity, 1))}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity, 1))}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-white\/10{background-color:rgb(255 255 255 / 0.1)}.p-10{padding:2.5rem}.p-2{padding:0.5rem}.px-16{padding-left:4rem;padding-right:4rem}.px-4{padding-left:1rem;padding-right:1rem}.py-20{padding-top:5rem;padding-bottom:5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.text-center{text-align:center}.text-right{text-align:right}.text-2xl{font-size:1.5rem;line-height:2rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-6xl{font-size:3.75rem;line-height:1}.text-\[10px\]{font-size:10px}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-black{font-weight:900}.font-bold{font-weight:700}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-tight{line-height:1.25}.tracking-\[0\.4em\]{letter-spacing:0.4em}.tracking-tighter{letter-spacing:-0.05em}.tracking-widest{letter-spacing:0.1em}.text-\[\#C3E92D\]{--tw-text-opacity:1;color:rgb(195 233 45 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.opacity-60{opacity:0.6}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.hover\:scale-105:hover{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:opacity-80:hover{opacity:0.8}.active\:scale-95:active{--tw-scale-x:.95;--tw-scale-y:.95;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@media (min-width: 768px){.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}}</style><style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.container{width:100%}@media (min-width: 640px){.container{max-width:640px}}@media (min-width: 768px){.container{max-width:768px}}@media (min-width: 1024px){.container{max-width:1024px}}@media (min-width: 1280px){.container{max-width:1280px}}@media (min-width: 1536px){.container{max-width:1536px}}.mx-auto{margin-left:auto;margin-right:auto}.mb-0{margin-bottom:0px}.mb-16{margin-bottom:4rem}.mb-2{margin-bottom:0.5rem}.mb-8{margin-bottom:2rem}.mt-16{margin-top:4rem}.mt-4{margin-top:1rem}.flex{display:flex}.grid{display:grid}.h-16{height:4rem}.w-16{width:4rem}.w-full{width:100%}.max-w-5xl{max-width:64rem}.max-w-md{max-width:28rem}.flex-1{flex:1 1 0%}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-10{gap:2.5rem}.gap-12{gap:3rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.rounded-2xl{border-radius:1rem}.rounded-\[1\.5rem\]{border-radius:1.5rem}.rounded-\[2rem\]{border-radius:2rem}.rounded-\[40px\]{border-radius:40px}.rounded-full{border-radius:9999px}.bg-\[\#C3E92D\]{--tw-bg-opacity:1;background-color:rgb(195 233 45 / var(--tw-bg-opacity, 1))}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity, 1))}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-white\/10{background-color:rgb(255 255 255 / 0.1)}.p-10{padding:2.5rem}.p-2{padding:0.5rem}.px-16{padding-left:4rem;padding-right:4rem}.px-4{padding-left:1rem;padding-right:1rem}.py-20{padding-top:5rem;padding-bottom:5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.text-center{text-align:center}.text-right{text-align:right}.text-2xl{font-size:1.5rem;line-height:2rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-6xl{font-size:3.75rem;line-height:1}.text-\[10px\]{font-size:10px}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-black{font-weight:900}.font-bold{font-weight:700}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-tight{line-height:1.25}.tracking-\[0\.4em\]{letter-spacing:0.4em}.tracking-tighter{letter-spacing:-0.05em}.tracking-widest{letter-spacing:0.1em}.text-\[\#C3E92D\]{--tw-text-opacity:1;color:rgb(195 233 45 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.opacity-60{opacity:0.6}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.hover\:scale-105:hover{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:opacity-80:hover{opacity:0.8}.active\:scale-95:active{--tw-scale-x:.95;--tw-scale-y:.95;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@media (min-width: 768px){.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}}</style></head>
+<body class="header-sticky">
+    
+    
+    
+    
+    
+    <div class="header-top">
+    <div class="error_message" style="margin-bottom: 15px; font-weight: bold;"></div>
+    <div class="themeflat-container">
+        <div class="header-top-inner">
+            <div class="login" style="display: flex; align-items: center; gap: 10px; margin-left: 30px">
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.6484 17.8756C18.2206 15.4072 16.0203 13.6372 13.4525 12.7981C14.7226 12.042 15.7094 10.8898 16.2614 9.51853C16.8134 8.14726 16.8999 6.63272 16.5078 5.20749C16.1157 3.78226 15.2666 2.52515 14.0909 1.62921C12.9151 0.733275 11.4778 0.248047 9.99964 0.248047C8.52146 0.248047 7.08414 0.733275 5.90842 1.62921C4.73269 2.52515 3.88358 3.78226 3.49146 5.20749C3.09935 6.63272 3.18592 8.14726 3.73788 9.51853C4.28984 10.8898 5.27668 12.042 6.54683 12.7981C3.97902 13.6362 1.77871 15.4062 0.350893 17.8756C0.298533 17.961 0.263803 18.056 0.248752 18.155C0.233701 18.254 0.238634 18.355 0.26326 18.4521C0.287886 18.5492 0.331707 18.6404 0.392136 18.7202C0.452565 18.8001 0.528379 18.867 0.615104 18.9171C0.70183 18.9672 0.79771 18.9995 0.897088 19.0119C0.996466 19.0243 1.09733 19.0167 1.19373 18.9896C1.29012 18.9624 1.3801 18.9162 1.45835 18.8537C1.5366 18.7912 1.60154 18.7136 1.64933 18.6256C3.41558 15.5731 6.53746 13.7506 9.99964 13.7506C13.4618 13.7506 16.5837 15.5731 18.35 18.6256C18.3977 18.7136 18.4627 18.7912 18.5409 18.8537C18.6192 18.9162 18.7092 18.9624 18.8056 18.9896C18.902 19.0167 19.0028 19.0243 19.1022 19.0119C19.2016 18.9995 19.2975 18.9672 19.3842 18.9171C19.4709 18.867 19.5467 18.8001 19.6072 18.7202C19.6676 18.6404 19.7114 18.5492 19.736 18.4521C19.7607 18.355 19.7656 18.254 19.7505 18.155C19.7355 18.056 19.7008 17.961 19.6484 17.8756ZM4.74964 7.0006C4.74964 5.96224 5.05755 4.94721 5.63443 4.08385C6.21131 3.2205 7.03124 2.54759 7.99056 2.15023C8.94987 1.75287 10.0055 1.6489 11.0239 1.85147C12.0423 2.05405 12.9777 2.55406 13.712 3.28829C14.4462 4.02251 14.9462 4.95797 15.1488 5.97637C15.3513 6.99477 15.2474 8.05037 14.85 9.00969C14.4527 9.969 13.7797 10.7889 12.9164 11.3658C12.053 11.9427 11.038 12.2506 9.99964 12.2506C8.60771 12.2491 7.27322 11.6955 6.28898 10.7113C5.30473 9.72702 4.75113 8.39253 4.74964 7.0006Z" fill="white"></path>
+                </svg>
+                
+                
+                                    <div class="user-info" style="display: flex; align-items: center; gap: 10px;">
+                        <a href="https://test-myanrun.itplus.net.mm/user/dashboard" style="text-decoration: none;">
+                            <span style="color: white; font-weight: bold; font-size: 13px;">Hi, Felix</span>
+                        </a>
+                        <form action="https://test-myanrun.itplus.net.mm/logout" method="POST" style="margin: 0;">
+                            <input type="hidden" name="_token" value="xIQC9GsjvDkAvaXxdMky1ajIulK3FbJP2KrkoHhn" autocomplete="off">                            <button type="submit" style="background: none; border: 1px solid white; color: white; padding: 2px 8px; font-size: 11px; border-radius: 4px;">Logout</button>
+                        </form>
+                    </div>
+                            </div>
+            <div class="address">
+                <a href="mailto:info@myanrun.com"><i class="icon-Vector"></i>info@myanrun.com</a>
+                <address><i class="icon-Vector-22"></i>No.68, Htan Ta Pin Street, Kamaryut, Yangon, Myanmar</address>
+            </div>
+            <div class="social-icon">
+                <a href="https://www.facebook.com/share/g/1G6ZtYxVfj/" target="_blank"><i class="icon-facebook"></i></a>
+                <a href="https://www.facebook.com/share/1CFptZmwGM/" target="_blank"><i class="icon-facebook"></i></a>
+                <a href="http://www.youtube.com/@RUNderfulMyanmar-j9x" target="_blank"><i class="icon-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<header id="header" class="header style1 clearfix downscrolled upscrolled">
+    <div class="themeflat-container">
+        <div class="header-inner">
+            <div id="logo" class="logo">
+                <a href="https://test-myanrun.itplus.net.mm/" rel="home">
+                    <img src="./Ticket Sales - MYAN RUN_files/myarun(logo).jpg" alt="image" style="width: 200px; background: transparent;">
+                </a>
+            </div>
+            
+            <div class="nav-wrap">
+                <div class="btn-menu"><span class="icon-menu"></span></div>
+                
+            <nav id="mainnav" class="mainnav">
+                    <ul class="menu">
+                        <li><a href="https://test-myanrun.itplus.net.mm/">Home</a></li>
+                        <li><a href="https://test-myanrun.itplus.net.mm/about">About us</a></li>
+                        <li><a href="https://test-myanrun.itplus.net.mm/event">Our Events</a></li>
+                        <li><a href="https://test-myanrun.itplus.net.mm/dinner">Our Dinner</a></li>
+                        <li><a href="https://test-myanrun.itplus.net.mm/race">Our Race</a></li>
+                        <!-- <li><a href="/score">Our Score</a></li> -->
+                        <li><a href="https://test-myanrun.itplus.net.mm/result">Our Results</a></li>
+                        <li><a href="https://test-myanrun.itplus.net.mm/race_guide">Race Guide</a></li>
+                        <li><a href="https://test-myanrun.itplus.net.mm/blog">Our Stories</a></li>
+                        <li><a href="https://test-myanrun.itplus.net.mm/contact">Contact us</a></li>
+                        
+                        
+                                                    <li class="mobile-only-menu">
+                                <a href="https://test-myanrun.itplus.net.mm/user/dashboard">My Account (Felix)</a>
+                            </li>
+                            <li class="mobile-only-menu">
+                                <form action="https://test-myanrun.itplus.net.mm/logout" method="POST">
+                                    <input type="hidden" name="_token" value="xIQC9GsjvDkAvaXxdMky1ajIulK3FbJP2KrkoHhn" autocomplete="off">                                    <button type="submit" class="btn-contact">Logout</button>
+                                </form>
+                            </li>
+                                            </ul>
+                </nav></div>
+
+            <div class="header-right" style="padding-right: 20px;">
+                <div class="search">
+                    <a class="show-search">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M21.0004 21.0004L16.6504 16.6504" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    </a>
+                </div>
+
+                <!-- <a href="/contact" class="btn-contact">Contact Us</a> -->
+            </div>
+        </div>
+    </div>
+</header><div style="height: 112px; display: none;"></div>
+
+    <div class="overlay-menu-mobie">
+        <div class="close-btn">
+            <span class="close-menus"></span>
+        </div>
+    </div>        
+    
+    <main>
+        <div id="ticket-page-scope" class="content-wrapper py-20 px-4">
+    <form action="https://test-myanrun.itplus.net.mm/select-race" method="POST">
+        <input type="hidden" name="_token" value="xIQC9GsjvDkAvaXxdMky1ajIulK3FbJP2KrkoHhn" autocomplete="off">        
+        <input type="hidden" name="ticket_type_id" id="input-category" value="6">
+        <input type="hidden" name="ticket_name" id="input-name" value="10KM">
+        <input type="hidden" name="price" id="input-price" value="150000">
+        <input type="hidden" name="nationality" id="input-nat" value="national">
+        <input type="hidden" name="event_id" value="4">
+
+        <div class="max-w-5xl mx-auto"> 
+            <header class="flex flex-col items-center justify-center mb-16 text-center downscrolled upscrolled">
+                <div class="mb-8">
+                    <h2 class="text-[#C3E92D] font-black uppercase tracking-widest text-lg mb-2">
+                        Bagan Marathon 2026
+                    </h2>
+                    
+                    <h1 class="text-6xl font-black italic tracking-tighter uppercase text-slate-900 leading-tight">
+                        Pick Your <span class="text-[#C3E92D]">Race</span>
+                    </h1>
+                    <p class="text-slate-400 font-bold mt-4 uppercase text-[10px] tracking-[0.4em]">Select your category below</p>
+                </div>
+                
+                <div class="flex p-2 bg-slate-900 rounded-[2rem] w-full max-w-md shadow-2xl">
+                    <button type="button" id="btn-local" onclick="updatePricing(&#39;local&#39;)" class="flex-1 py-3 rounded-[1.5rem] text-xs font-black uppercase tracking-widest transition-all duration-300 bg-[#C3E92D] text-slate-900">
+                        National
+                    </button>
+                    <button type="button" id="btn-foreign" onclick="updatePricing(&#39;foreign&#39;)" class="flex-1 py-3 rounded-[1.5rem] text-xs font-black uppercase tracking-widest transition-all duration-300 text-[#C3E92D] hover:opacity-80">
+                        Foreigner
+                    </button>
+                </div>
+            </header><div style="height: 112px; display: block;"></div>
+
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                                    <div class="ticket-card active" style="background-image: url(&#39;https://test-myanrun.itplus.net.mm/storage/tickets/display/UDyahiplPAJJCR487cfIGyvGiso3WcyYumX2YNgd.jpg&#39;);" data-id="6" data-name="10KM" data-national="150000" data-foreign="150000" data-national-image="tickets/display/UDyahiplPAJJCR487cfIGyvGiso3WcyYumX2YNgd.jpg" data-foreign-image="tickets/display/H97qA2X6rzsDIIggGfNIuQxBnJmYKZde40m2gBSR.jpg" onclick="selectTicket(this)">
+                        <span class="category-badge">10KM</span>
+
+                        <div class="price-display price-tag">
+                        150000 <span class="text-lg opacity-60">MMK</span>
+                        </div>
+                    </div>
+                                    <div class="ticket-card" style="background-image: url(&#39;https://test-myanrun.itplus.net.mm/storage/tickets/display/qmJP5pgAKS5jTJXwpKs4mXyAwzr5ikAtzWsis3Ib.jpg&#39;);" data-id="7" data-name="21KM" data-national="170000" data-foreign="170000" data-national-image="tickets/display/qmJP5pgAKS5jTJXwpKs4mXyAwzr5ikAtzWsis3Ib.jpg" data-foreign-image="tickets/display/EQZIY4vh4RpuAnXrpfgrOA4TJJb8C7Tvcseh3TjV.jpg" onclick="selectTicket(this)">
+                        <span class="category-badge">21KM</span>
+
+                        <div class="price-display price-tag">
+                        170000 <span class="text-lg opacity-60">MMK</span>
+                        </div>
+                    </div>
+                                    <div class="ticket-card" style="background-image: url(&#39;https://test-myanrun.itplus.net.mm/storage/tickets/display/7Z3tDGFZH1JbDlT6JcBmCXYJahC7ASwexKyIXhAV.jpg&#39;);" data-id="8" data-name="42KM" data-national="190000" data-foreign="190000" data-national-image="tickets/display/7Z3tDGFZH1JbDlT6JcBmCXYJahC7ASwexKyIXhAV.jpg" data-foreign-image="tickets/display/fr2rqo5ySqqSlx4jXwrC7ue73RftcVZL1tE9buUt.jpg" onclick="selectTicket(this)">
+                        <span class="category-badge">42KM</span>
+
+                        <div class="price-display price-tag">
+                        190000 <span class="text-lg opacity-60">MMK</span>
+                        </div>
+                    </div>
+                            </div>
+
+            <div class="mt-16 bg-slate-900 p-10 text-white flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl rounded-[40px]">
+                <div class="flex items-center gap-6">
+                    <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center text-2xl">
+                        <i class="fas fa-bolt text-[#C3E92D]"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-2xl font-black uppercase italic tracking-tighter"><span id="summary-name" class="text-[#C3E92D]">10KM</span>?</h4>
+                        <p class="text-slate-500 text-[10px] font-bold uppercase tracking-widest">Selected category</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-12">
+                    <div class="text-right">
+                        <p class="text-slate-400 font-black uppercase text-[10px] tracking-widest">Total to Pay</p>
+                        <div id="summary-price" class="text-4xl font-black tracking-tighter text-[#C3E92D]">150000 MMK</div>
+                    </div>
+                    <button type="submit" onclick="return validateSelection()" class="bg-[#C3E92D] hover:scale-105 active:scale-95 text-slate-900 px-16 py-6 font-black uppercase tracking-widest text-sm transition-all shadow-xl rounded-full">
+                        BUY
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+    </main>
+    <!-- Footer -->
+    <footer class="footer background-black">
+        <div class="footer-widgets">
+            <div class="themeflat-container">
+                <div class="row footer-top">
+                    <div class="col-xxl-4 col-lg-4 col-xl-4 col-md-12 logo-footer">
+                        <div class="widget">
+                            <div class="textwidget">
+                                <!--<img id="a1" src="images/logo/myarun(logo).jpg" alt="images"> -->
+                                <!-- <p>Welcome to our running community! Discover the joy of running, connect with fellow
+                                    enthusiasts, and unlock your full potential with our expert resources and training
+                                    programs.
+                                </p> -->
+                                <div class="social-icon-footer">
+                                    <a href="https://www.facebook.com/share/g/1G6ZtYxVfj/" target="_blank" rel="noopener noreferrer">
+    <i class="icon-facebook"></i>
+</a>
+
+<a href="https://www.facebook.com/share/1CFptZmwGM/" target="_blank" rel="noopener noreferrer">
+    <i class="icon-facebook"></i>
+</a>
+
+<a href="http://www.youtube.com/@RUNderfulMyanmar-j9x" target="_blank" rel="noopener noreferrer">
+    <i class="icon-youtube"></i>
+</a>
+
+
+                                </div>
+                            </div>
+                        </div><!-- /.widget -->
+                    </div><!-- /.col-md-4 -->
+
+                    <div class="col-xxl-4 col-lg-4 col-xl-4 col-md-6 link-footer">
+                        <div class="widget widget_menu-footer">
+                            <h5 class="widget-title">Quick Links</h5>
+                            <ul class="menu-footer">
+                                <li><a href="https://test-myanrun.itplus.net.mm/about">About Us</a></li>
+                                <li><a href="https://test-myanrun.itplus.net.mm/event">Our Event</a></li>
+                                <li><a href="https://test-myanrun.itplus.net.mm/race">Our Race</a></li>
+                                 <li><a href="https://test-myanrun.itplus.net.mm/blog">Our Stories</a></li> 
+                                <li><a href="https://test-myanrun.itplus.net.mm/contact">Contact Us</a></li>
+                            </ul><!-- /.menu -->
+                        </div><!-- /.widget -->
+                        <div class="widget widget_menu-footer">
+                            <h5 class="widget-title">Page</h5>
+                            <ul class="menu-footer">
+                                 <li><a href="https://test-myanrun.itplus.net.mm/blog">Our Stories</a></li>
+                                <!-- <li><a href="event-details.html">Events Detail</a></li>  -->
+                                 <li><a href="https://test-myanrun.itplus.net.mm/race">Our Race</a></li>
+                                <li><a href="https://test-myanrun.itplus.net.mm/event">Events</a></li>
+                                <li><a href="https://test-myanrun.itplus.net.mm/about">About Us</a></li>
+                            </ul><!-- /.menu -->
+                        </div><!-- /.widget -->
+                    </div><!-- /.col-md-4 -->
+
+                    <div class="col-xxl-4 col-lg-4 col-xl-4 col-md-6 new-letter">
+                        <div class="widget widget_text widget_menu-footer">
+                            <h5 class="widget-title">Contact Us</h5>
+                            <div class="menu-footer">
+                                <div class="text-phone">
+                                    <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M26.43 16.3754C25.785 16.3754 25.275 15.8504 25.275 15.2204C25.275 14.6654 24.72 13.5104 23.79 12.5054C22.875 11.5304 21.87 10.9604 21.03 10.9604C20.385 10.9604 19.875 10.4354 19.875 9.80539C19.875 9.17539 20.4 8.65039 21.03 8.65039C22.53 8.65039 24.105 9.46039 25.485 10.9154C26.775 12.2804 27.6 13.9754 27.6 15.2054C27.6 15.8504 27.075 16.3754 26.43 16.3754Z" fill="white"></path>
+                                        <path d="M31.8456 16.375C31.2006 16.375 30.6906 15.85 30.6906 15.22C30.6906 9.895 26.3556 5.575 21.0456 5.575C20.4006 5.575 19.8906 5.05 19.8906 4.42C19.8906 3.79 20.4006 3.25 21.0306 3.25C27.6306 3.25 33.0006 8.62 33.0006 15.22C33.0006 15.85 32.4756 16.375 31.8456 16.375Z" fill="#C3E92D"></path>
+                                        <path d="M17.685 21.565L12.78 26.47C12.24 25.99 11.715 25.495 11.205 24.985C9.66 23.425 8.265 21.79 7.02 20.08C5.79 18.37 4.8 16.66 4.08 14.965C3.36 13.255 3 11.62 3 10.06C3 9.04 3.18 8.065 3.54 7.165C3.9 6.25 4.47 5.41 5.265 4.66C6.225 3.715 7.275 3.25 8.385 3.25C8.805 3.25 9.225 3.34 9.6 3.52C9.99 3.7 10.335 3.97 10.605 4.36L14.085 9.265C14.355 9.64 14.55 9.985 14.685 10.315C14.82 10.63 14.895 10.945 14.895 11.23C14.895 11.59 14.79 11.95 14.58 12.295C14.385 12.64 14.1 13 13.74 13.36L12.6 14.545C12.435 14.71 12.36 14.905 12.36 15.145C12.36 15.265 12.375 15.37 12.405 15.49C12.45 15.61 12.495 15.7 12.525 15.79C12.795 16.285 13.26 16.93 13.92 17.71C14.595 18.49 15.315 19.285 16.095 20.08C16.635 20.605 17.16 21.115 17.685 21.565Z" fill="#C3E92D"></path>
+                                        <path d="M32.9554 27.7436C32.9554 28.1636 32.8804 28.5986 32.7304 29.0186C32.6854 29.1386 32.6404 29.2586 32.5804 29.3786C32.3254 29.9186 31.9954 30.4286 31.5604 30.9086C30.8254 31.7186 30.0154 32.3036 29.1004 32.6786C29.0854 32.6786 29.0704 32.6936 29.0554 32.6936C28.1704 33.0536 27.2104 33.2486 26.1754 33.2486C24.6454 33.2486 23.0104 32.8886 21.2854 32.1536C19.5604 31.4186 17.8354 30.4286 16.1254 29.1836C15.5404 28.7486 14.9554 28.3136 14.4004 27.8486L19.3054 22.9436C19.7254 23.2586 20.1004 23.4986 20.4154 23.6636C20.4904 23.6936 20.5804 23.7386 20.6854 23.7836C20.8054 23.8286 20.9254 23.8436 21.0604 23.8436C21.3154 23.8436 21.5104 23.7536 21.6754 23.5886L22.8154 22.4636C23.1904 22.0886 23.5504 21.8036 23.8954 21.6236C24.2404 21.4136 24.5854 21.3086 24.9604 21.3086C25.2454 21.3086 25.5454 21.3686 25.8754 21.5036C26.2054 21.6386 26.5504 21.8336 26.9254 22.0886L31.8904 25.6136C32.2804 25.8836 32.5504 26.1986 32.7154 26.5736C32.8654 26.9486 32.9554 27.3236 32.9554 27.7436Z" fill="white"></path>
+                                    </svg>
+                                    
+                                </div><div class="address">
+    <div class="contact-numbers">
+        <a href="tel:095405026"><span class="elementor-icon-list-text">09 540 5026</span></a>
+          <a href="tel:095135324"><span class="elementor-icon-list-text">09 513 5324</span></a>
+    </div>
+    </div>
+
+
+                                <p><i class="icon-MapPin"></i>No.68, Htan Ta Pin Street, Aung Myay Thar Si Housing, No(1) Quarter ,Kamaryut, Yangon 11041</p>
+                                <form action="https://test-myanrun.itplus.net.mm/ticket?event=Bagan+Marathon+2026#">
+                                    <div class="input-new-letter">
+                                        <input class="btn-email" name="email" id="email" type="email" placeholder="Your email address" required="">
+                                        <button class="btn-submit" type="submit"><i class="icon-uniE925"></i></button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div><!-- /.widget -->
+                    </div><!-- /.col-md-4 -->
+
+                </div><!-- /.row -->
+                <div class="row footer-bottom">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="copyright">
+                            <p>©2026 <a href="https://test-myanrun.itplus.net.mm/index.html" target="_blank"> Myanrun</a> All Rights Reserved.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-12">
+                        <ul class="link-footer-bottom">
+                            <li><a href="https://test-myanrun.itplus.net.mm/term">Terms Of Services</a></li>
+                            <li><a href="https://test-myanrun.itplus.net.mm/pp">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- CENTER TEXT -->
+                    <div class="col-12" style="width: 100%; text-align: center; margin-top: 30px; padding-bottom: 50px; position: relative; z-index: 9999;">
+                        <p style="font-size: 16px; color: #fff; margin: 0;">Powered by 
+                            <a href="https://itplus.net.mm/" target="_blank" rel="noopener noreferrer" style="
+                                    color: #39FF14 !important; 
+                                    font-weight: 900 !important; 
+                                    font-size: 22px !important; 
+                                    text-decoration: none !important; 
+                                    display: inline-block !important;
+                                    position: relative !important;
+                                    z-index: 10000 !important;
+                                    pointer-events: auto !important;
+                                    text-shadow: 0 0 10px rgba(57, 255, 20, 0.7), 0 0 20px rgba(57, 255, 20, 0.4);
+                                    transition: all 0.3s ease;
+                            ">
+                            IT PLUS
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div><!-- /.container -->
+        </div><!-- /.footer-widgets -->
+    </footer>
+
+    <!-- Go Top -->
+    <a class="go-top">
+        <i class="icon-ctrl"></i>
+    </a>
+
+    <!-- Modal-login -->
+<div class="modal fade modal-login " id="exampleModalToggle" aria-hidden="true" aria-label="exampleModalToggleLabel" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="tfre_login-form">
+                <h2>Login:</h2>
+                
+                
+                <form action="https://test-myanrun.itplus.net.mm/login" class="tfre_login" method="post" id="tfre_custom-login-form">
+                    <input type="hidden" name="_token" value="xIQC9GsjvDkAvaXxdMky1ajIulK3FbJP2KrkoHhn" autocomplete="off">    
+                    <div class="container">
+                        <div class="form-group">
+                            <label>Email Address: <span style="color: red;">*</span></label>
+                            <input type="email" name="email" id="email" placeholder="Enter your email" value="" required="">
+                        </div>
+                        <div class="form-group">
+                            <label>Password: <span style="color: red;">*</span></label>
+                            <input type="password" name="password" id="password" placeholder="Your password" required="">
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center" style="margin-top: 10px;">
+                            <label style="font-size: 13px; cursor: pointer;">
+                                <input type="checkbox" name="remember"> Remember Me
+                            </label>
+                            <a href="https://test-myanrun.itplus.net.mm/ticket?event=Bagan+Marathon+2026#" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal" data-bs-dismiss="modal" class="tfre-reset-password">Forgot password?</a>
+                        </div>
+                        <button type="submit" class="flat-button" style="width: 100%; margin-top: 20px;">Login</button>
+                    </div>
+                </form>
+            </div>
+            <div class="container tfre_register" id="tfre_register_redirect" style="text-align: center; padding-bottom: 20px;">
+                <p>Don't you have an account? <a href="https://test-myanrun.itplus.net.mm/ticket?event=Bagan+Marathon+2026#" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Register.</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade modal-login" id="exampleModalToggle2" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered" style="max-width: 500px;">
+        <div class="modal-content" style="padding: 15px;">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" style="position: absolute; right: 15px; top: 15px; z-index: 10;"></button>
+            <div class="tfre_registration-form">
+                <h4 style="margin-bottom: 15px; font-weight: bold;">Register</h4>
+                <form class="tfre_register" method="post" id="tfre_custom-register-form" action="https://test-myanrun.itplus.net.mm/register">
+                    <input type="hidden" name="_token" value="xIQC9GsjvDkAvaXxdMky1ajIulK3FbJP2KrkoHhn" autocomplete="off">                    <div class="row g-2"> 
+                        <div class="col-6 form-group">
+                            <label style="font-size: 12px;">First Name <span style="color: red;">*</span></label>
+                            <input type="text" name="first_name" placeholder="John" required="" style="height: 35px; font-size: 13px; width: 100%;">
+                        </div>
+                        <div class="col-6 form-group">
+                            <label style="font-size: 12px;">Middle Name</label>
+                            <input type="text" name="middle_name" placeholder="Quincy" style="height: 35px; font-size: 13px; width: 100%;">
+                        </div>
+                        <div class="col-6 form-group">
+                            <label style="font-size: 12px;">Last Name <span style="color: red;">*</span></label>
+                            <input type="text" name="last_name" placeholder="Doe" required="" style="height: 35px; font-size: 13px; width: 100%;">
+                        </div>
+                        <div class="col-12 form-group">
+                            <label style="font-size: 12px;">Email <span style="color: red;">*</span></label>
+                            <input type="email" name="email" placeholder="example@mail.com" required="" style="height: 35px; font-size: 13px; width: 100%;">
+                        </div>
+                        <div class="col-12 form-group">
+                            <label style="font-size: 12px;">Phone <span style="color: red;">*</span></label>
+                            <input type="tel" name="phone" value="+95 9" placeholder="+95 9XXXXXXXX" required="" style="height: 35px; font-size: 13px; width: 100%;">
+                        </div>
+                        <div class="col-6 form-group">
+                            <label style="font-size: 12px;">Password <span style="color: red;">*</span></label>
+                            <input type="password" name="password" placeholder="••••••••" required="" style="height: 35px; width: 100%;">
+                        </div>
+                        <div class="col-6 form-group">
+                            <label style="font-size: 12px;">Confirm <span style="color: red;">*</span></label>
+                            <input type="password" name="password_confirmation" placeholder="••••••••" required="" style="height: 35px; width: 100%;">
+                        </div>
+                    </div>
+                    <button type="submit" class="flat-button" style="width: 100%; margin-top: 15px; padding: 10px;">Sign Up</button>
+                </form>
+                <p style="text-align: center; margin-top: 10px; font-size: 13px;">
+                    Already have an account? <a href="https://test-myanrun.itplus.net.mm/ticket?event=Bagan+Marathon+2026#" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Sign in.</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+       <!-- modal find_size -->
+       <div class="modal fade modalDemo tf-product-modal" id="find_size">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="">
+                    <h3>Size chart</h3>
+                    <span class="icon-cross icon-close-popup" data-bs-dismiss="modal"></span>
+                </div>
+                <div class="tf-rte">
+                    <div class="tf-table-res-df">
+                        <h4>Size guide</h4>
+                        <table class="tf-sizeguide-table">
+                            <thead>
+                                <tr>
+                                    <th>Size</th>
+                                    <th>US</th>
+                                    <th>Bust</th>
+                                    <th>Waist</th>
+                                    <th>Low Hip</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>XS</td>
+                                    <td>2</td>
+                                    <td>32</td>
+                                    <td>24 - 25</td>
+                                    <td>33 - 34</td>
+                                </tr>
+                                <tr>
+                                    <td>S</td>
+                                    <td>4</td>
+                                    <td>34 - 35</td>
+                                    <td>26 - 27</td>
+                                    <td>35 - 26</td>
+                                </tr>
+                                <tr>
+                                    <td>M</td>
+                                    <td>6</td>
+                                    <td>36 - 37</td>
+                                    <td>28 - 29</td>
+                                    <td>38 - 40</td>
+                                </tr>
+                                <tr>
+                                    <td>L</td>
+                                    <td>8</td>
+                                    <td>38 - 29</td>
+                                    <td>30 - 31</td>
+                                    <td>42 - 44</td>
+                                </tr>
+                                <tr>
+                                    <td>XL</td>
+                                    <td>10</td>
+                                    <td>40 - 41</td>
+                                    <td>32 - 33</td>
+                                    <td>45 - 47</td>
+                                </tr>
+                                <tr>
+                                    <td>XXL</td>
+                                    <td>12</td>
+                                    <td>42 - 43</td>
+                                    <td>34 - 35</td>
+                                    <td>48 - 50</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tf-page-size-chart-content">
+                        <div>
+                            <h4>Measuring Tips</h4>
+                            <h6>Bust</h6>
+                            <p>Measure around the fullest part of your bust.</p>
+                            <h6>Waist</h6>
+                            <p>Measure around the narrowest part of your torso.</p>
+                            <h6>Low Hip</h6>
+                            <p class="mb-0">With your feet together measure around the fullest part of your hips/rear.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /modal find_size -->
+    <!-- modal quick_view -->
+    <div class="modal fade modalDemo" id="quick_view">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="">
+                    <span class="icon-cross icon-close-popup" data-bs-dismiss="modal"></span>
+                </div>
+                <div class="wrap">
+                    <div class="tf-product-media-wrap">
+                        <div class="swiper tf-single-slide swiper-initialized swiper-horizontal">
+                            <div class="swiper-wrapper" id="swiper-wrapper-ec100f07259dd3e77" aria-live="polite" style="transition-duration: 0ms; transition-delay: 0ms;">
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <img src="./Ticket Sales - MYAN RUN_files/product-detail-1.jpg" alt="img-product">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <img src="./Ticket Sales - MYAN RUN_files/product-detail-2.jpg" alt="img-product">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button-next button-style-arrow single-slide-prev" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-ec100f07259dd3e77" aria-disabled="false"></div>
+                            <div class="swiper-button-prev button-style-arrow single-slide-next" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-ec100f07259dd3e77" aria-disabled="false"></div>
+                        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+                    </div>
+                    <div class="tf-product-info-wrap">
+                        <div class="tf-product-info-list">
+                            <div class="tf-product-info-heading">
+                                <div class="tf-product-info-name">
+                                    <div class="text text-sub-heading">SHOES</div>
+                                    <h3 class="name">Ribbed long-sleeved t-shirt</h3>
+                                    <div class="tf-product-info-rate">
+                                        <div class="list-star d-flex">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.99229 8.16559L1.87977 6.41682C1.48105 6.09796 1.65593 5.45674 2.16191 5.38446L5.15814 5.25097L6.43766 2.04313C6.52684 1.86534 6.70813 1.75342 6.90691 1.75342C7.10569 1.75342 7.28698 1.86592 7.37617 2.04313L8.65568 5.25097L11.6519 5.38446C12.1579 5.45674 12.3328 6.09796 11.9341 6.41682L9.82153 8.16559L10.398 11.5798C10.4645 12.0455 9.98067 12.3941 9.56038 12.1837L6.90691 10.4973L4.25344 12.1831C3.83257 12.3935 3.34933 12.045 3.41578 11.5792L3.99229 8.16559Z" fill="#ECB018"></path>
+                                            </svg>
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.99229 8.16559L1.87977 6.41682C1.48105 6.09796 1.65593 5.45674 2.16191 5.38446L5.15814 5.25097L6.43766 2.04313C6.52684 1.86534 6.70813 1.75342 6.90691 1.75342C7.10569 1.75342 7.28698 1.86592 7.37617 2.04313L8.65568 5.25097L11.6519 5.38446C12.1579 5.45674 12.3328 6.09796 11.9341 6.41682L9.82153 8.16559L10.398 11.5798C10.4645 12.0455 9.98067 12.3941 9.56038 12.1837L6.90691 10.4973L4.25344 12.1831C3.83257 12.3935 3.34933 12.045 3.41578 11.5792L3.99229 8.16559Z" fill="#ECB018"></path>
+                                            </svg>
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.99229 8.16559L1.87977 6.41682C1.48105 6.09796 1.65593 5.45674 2.16191 5.38446L5.15814 5.25097L6.43766 2.04313C6.52684 1.86534 6.70813 1.75342 6.90691 1.75342C7.10569 1.75342 7.28698 1.86592 7.37617 2.04313L8.65568 5.25097L11.6519 5.38446C12.1579 5.45674 12.3328 6.09796 11.9341 6.41682L9.82153 8.16559L10.398 11.5798C10.4645 12.0455 9.98067 12.3941 9.56038 12.1837L6.90691 10.4973L4.25344 12.1831C3.83257 12.3935 3.34933 12.045 3.41578 11.5792L3.99229 8.16559Z" fill="#ECB018"></path>
+                                            </svg>
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.99229 8.16559L1.87977 6.41682C1.48105 6.09796 1.65593 5.45674 2.16191 5.38446L5.15814 5.25097L6.43766 2.04313C6.52684 1.86534 6.70813 1.75342 6.90691 1.75342C7.10569 1.75342 7.28698 1.86592 7.37617 2.04313L8.65568 5.25097L11.6519 5.38446C12.1579 5.45674 12.3328 6.09796 11.9341 6.41682L9.82153 8.16559L10.398 11.5798C10.4645 12.0455 9.98067 12.3941 9.56038 12.1837L6.90691 10.4973L4.25344 12.1831C3.83257 12.3935 3.34933 12.045 3.41578 11.5792L3.99229 8.16559Z" fill="#ECB018"></path>
+                                            </svg>
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.1085 8.16559L1.99598 6.41682C1.59726 6.09796 1.77214 5.45674 2.27812 5.38446L5.27435 5.25097L6.55387 2.04313C6.64306 1.86534 6.82435 1.75342 7.02312 1.75342C7.2219 1.75342 7.40319 1.86592 7.49238 2.04313L8.7719 5.25097L11.7681 5.38446C12.2741 5.45674 12.449 6.09796 12.0503 6.41682L9.93774 8.16559L10.5143 11.5798C10.5807 12.0455 10.0969 12.3941 9.67659 12.1837L7.02312 10.4973L4.36965 12.1831C3.94878 12.3935 3.46554 12.045 3.53199 11.5792L4.1085 8.16559Z" fill="#E9E9E9"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="number-rate text-caption-1">(1.234 reviews)</div>
+                                    </div>
+                                </div>
+                                <div class="tf-product-info-desc">
+                                    <div class="tf-product-info-price">
+                                        <div class="price-on-sale">$68.00</div>
+                                        <div class="line"></div>
+                                        <div class="compare-at-price">$98.00</div>
+                                        <div class="badges-on-sale text-sub-heading">
+                                            -25%
+                                        </div>
+                                    </div>
+                                    <p>The garments labelled as Committed are products that have been produced using sustainable fibres or processes, reducing their environmental impact.</p>
+                                </div>
+                            </div>
+                            <div class="tf-product-info-choose-option">
+                                <div class="variant-picker-item">
+                                    <div class="variant-picker-label text-title">
+                                        Colors: <span class="variant-picker-label-value value-currentColor">Gray</span>
+                                    </div>
+                                    <div class="variant-picker-values">
+                                        <input id="values-beige1" type="radio" name="color2">
+                                        <label class="style-text rectangle-color radius-60" for="values-beige1" data-value="Beige" data-price="68.00">
+                                            <span class="btn-checkbox bg-beige"></span>
+                                            Beige
+                                        </label>
+                                        <input id="values-black2" type="radio" name="color2" checked="">
+                                        <label class="style-text rectangle-color radius-60" for="values-black2" data-value="Black" data-price="79.99">
+                                            <span class="btn-checkbox bg-black"></span>
+                                            Black
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="variant-picker-item">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="text-title variant-picker-label">
+                                            Size: <span class="variant-picker-label-value">L</span>
+                                        </div>
+                                    </div>
+                                    <div class="variant-picker-values gap12">
+                                        <input type="radio" name="size2" id="values-s1">
+                                        <label class="text-button style-text size-btn" for="values-s1" data-value="S" data-price="68.00">
+                                            S
+                                        </label>
+                                        <input type="radio" name="size2" id="values-m1">
+                                        <label class="text-button style-text size-btn" for="values-m1" data-value="M" data-price="68.00">
+                                            M
+                                        </label>
+                                        <input type="radio" name="size2" id="values-l1" checked="">
+                                        <label class="text-button style-text size-btn" for="values-l1" data-value="L" data-price="89.99">
+                                            L
+                                        </label>
+                                        <input type="radio" name="size2" id="values-xl1">
+                                        <label class="text-button style-text size-btn" for="values-xl1" data-value="XL" data-price="89.99">
+                                            XL
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="tf-product-info-btn-buy">
+                                    <div class="text-title mb_12">Quantity:</div>
+                                    <div class="tf-product-info-quantity">
+                                        <div class="wg-quantity">
+                                            <span class="btn-quantity minus-btn">-</span>
+                                            <input class="quantity-input" type="text" name="number" value="1">
+                                            <span class="btn-quantity plus-btn">+</span>
+                                        </div>
+                                        <a href="https://test-myanrun.itplus.net.mm/ticket?event=Bagan+Marathon+2026#" class="text-button-uppercase2 btn-add-cart">ADD TO CART</a>
+                                    </div>
+                                    <a class="tf-product-info-by-now text-button-uppercase2 mb-0" href="https://test-myanrun.itplus.net.mm/ticket?event=Bagan+Marathon+2026#">Buy It Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /modal quick_view -->
+    <!-- compare -->
+    <div class="modal fullBottom fade modal-compare" id="compare">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="header">
+                    <span class="icon-cross icon-close-popup" data-bs-dismiss="modal"></span>
+                </div>
+                <div class="wrap">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="tf-compare-list list-file-delete">
+                                    <div class="tf-compare-head">
+                                        <h5 class="title mb-0">Compare Products</h5>
+                                    </div>
+                                    <div class="tf-compare-wrap">
+                                        <div class="tf-compare-item file-delete-item">
+                                            <span class="icon icon-cross remove-item"></span>
+                                            <a href="https://test-myanrun.itplus.net.mm/shop-detail.html" class="image">
+                                                <img src="./Ticket Sales - MYAN RUN_files/5.png" alt="">
+                                            </a>
+                                            <div class="content">
+                                                <div class="text-title">
+                                                    <a class="link text-line-clamp-2" href="https://test-myanrun.itplus.net.mm/shop-detail.html">V-neck cotton T-shirt</a>
+                                                </div>
+                                                <div class="text-button">$59.99</div>
+                                            </div>
+                                        </div>
+                                        <div class="tf-compare-item file-delete-item">
+                                            <span class="icon icon-cross remove-item"></span>
+                                            <a href="https://test-myanrun.itplus.net.mm/shop-detail.html" class="image">
+                                                <img src="./Ticket Sales - MYAN RUN_files/6.png" alt="">
+                                            </a>
+                                            <div class="content">
+                                                <div class="text-title">
+                                                    <a class="link text-line-clamp-2" href="https://test-myanrun.itplus.net.mm/shop-detail.html">V-neck cotton T-shirt</a>
+                                                </div>
+                                                <div class="text-button">$59.99</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tf-compare-buttons">
+                                        <div class="tf-compare-buttons-wrap">
+                                            <div class="tf-compapre-button-clear-all clear-list-file tf-btn w-100 btn-white radius-4 has-border">
+                                                <span class="text text-btn-uppercase">Clear All Products</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <script>
+        window.mapboxToken = "";
+    </script>
+    <script src="./Ticket Sales - MYAN RUN_files/saved_resource"></script>
+    <script src="./Ticket Sales - MYAN RUN_files/jquery.min.js.download"></script>
+    <script src="./Ticket Sales - MYAN RUN_files/magnific-popup.min.js.download"></script>
+    <script src="./Ticket Sales - MYAN RUN_files/bootstrap.bundle.min.js.download"></script>
+    <script src="./Ticket Sales - MYAN RUN_files/jquery.cookie.js.download"></script>
+    <script src="./Ticket Sales - MYAN RUN_files/swiper-bundle.min.js.download"></script>
+    <script src="./Ticket Sales - MYAN RUN_files/owl.carousel.js.download"></script>
+    <script src="./Ticket Sales - MYAN RUN_files/wow.min.js.download"></script>
+    <script src="./Ticket Sales - MYAN RUN_files/count-down.js.download"></script>
+    <script src="./Ticket Sales - MYAN RUN_files/map.min.js.download"></script>
+    <script src="./Ticket Sales - MYAN RUN_files/map.js.download"></script>
+    <script src="./Ticket Sales - MYAN RUN_files/jquery-waypoints.js.download"></script>
+    <script src="./Ticket Sales - MYAN RUN_files/jquery-countTo.js.download"></script>
+    <script src="./Ticket Sales - MYAN RUN_files/main.js.download"></script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const firstCard = document.querySelector('.ticket-card');
+        if (firstCard) {
+            selectTicket(firstCard);
+        }
+    });
+    let currentType = 'local';
+    document.addEventListener('DOMContentLoaded', function() {
+        const natType = document.getElementById('hidden_nat_type').value;
+        const nrcContainer = document.getElementById('nrc_container');
+        const passportContainer = document.getElementById('passport_container');
+        const idLabel = document.getElementById('id_label');
+
+        // Logic to toggle containers based on the session/request type
+        if (natType === 'foreigner') {
+            nrcContainer.classList.add('hidden');
+            passportContainer.classList.remove('hidden');
+            idLabel.innerText = "Passport Information";
+            
+            // Highlight the Foreigner label visually
+            document.getElementById('label-foreigner').classList.remove('opacity-50', 'cursor-not-allowed');
+            document.getElementById('label-foreigner').classList.add('border-[#C3E92D]', 'bg-lime-50');
+        } else {
+            nrcContainer.classList.remove('hidden');
+            passportContainer.classList.add('hidden');
+            idLabel.innerText = "NRC Information";
+            
+            // Highlight the National label visually
+            document.getElementById('label-national').classList.remove('opacity-50', 'cursor-not-allowed');
+            document.getElementById('label-national').classList.add('border-[#C3E92D]', 'bg-lime-50');
+        }
+    });
+
+    function validateSelection() {
+        const category = document.getElementById('input-category').value;
+        const price = document.getElementById('input-price').value;
+
+        if (!category || !price) {
+            alert("Please select a ticket first");
+            return false;
+        }
+        return true;
+    }
+
+    function updatePricing(type) {
+        currentType = type;
+        const backendValue = (type === 'local') ? 'national' : 'foreigner';
+        document.getElementById('input-nat').value = backendValue;
+
+        const lb = document.getElementById('btn-local');
+        const fb = document.getElementById('btn-foreign');
+        
+        // Updated Classes: Smaller padding (py-3) and Green text for inactive state
+        const activeClass = "flex-1 py-3 rounded-[1.5rem] text-xs font-black uppercase tracking-widest transition-all duration-300 bg-[#C3E92D] text-slate-900 shadow-lg";
+        const inactiveClass = "flex-1 py-3 rounded-[1.5rem] text-xs font-black uppercase tracking-widest transition-all duration-300 text-[#C3E92D] hover:opacity-80";
+
+        if(type === 'local') {
+            lb.className = activeClass;
+            fb.className = inactiveClass;
+        } else {
+            fb.className = activeClass;
+            lb.className = inactiveClass;
+        }
+
+        document.querySelectorAll('.ticket-card').forEach(card => {
+            const price = (type === 'local')
+                ? card.getAttribute('data-national')
+                : card.getAttribute('data-foreign');
+            card.querySelector('.price-display').innerHTML = `${price} <span class="text-lg opacity-60">MMK</span>`;
+            const image = (type === 'local')
+                ? card.getAttribute('data-national-image')
+                : card.getAttribute('data-foreign-image');
+
+            card.style.backgroundImage = `url('/storage/${image}')`;
+            
+            if(card.classList.contains('active')) {
+                document.getElementById('summary-price').innerText = price + ' MMK';
+                document.getElementById('input-price').value = price;
+            }
+        });
+    }
+
+    function selectTicket(card) {
+        document.querySelectorAll('.ticket-card').forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
+        const name = card.getAttribute('data-name');
+        const price = (currentType === 'local')
+        ? card.getAttribute('data-national')
+        : card.getAttribute('data-foreign');
+        document.getElementById('summary-name').innerText = name;
+        document.getElementById('summary-price').innerText = price + ' MMK';
+        document.getElementById('input-category').value = card.getAttribute('data-id'); // ✅ ID
+        document.getElementById('input-name').value = name;
+        document.getElementById('input-price').value = price;
+    }
+</script>
+
+</body></html>

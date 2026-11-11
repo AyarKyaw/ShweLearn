@@ -1,0 +1,21 @@
+question_text,type,option_1,option_2,option_3,option_4,correct_option,is_correct
+"What does 'FOB' stand for in International Commercial Terms (Incoterms)?",multiple_choice,"Freight on Board","Free on Board","Forwarding Ocean Bill","Fast Order Booking",2,
+"Under CIF Incoterms, who is responsible for paying the main freight and insurance charges?",multiple_choice,"The Buyer","The Carrier","The Seller","The Freight Forwarder",3,
+"A Bill of Lading (B/L) serves as a document of title to the goods.",boolean,,,,,,1
+"In air freight shipping, the acronym 'IATA' stands for:",multiple_choice,"International Air Transport Association","International Cargo Trade Agency","Interstate Aviation and Transport Alliance","Integrated Air Tariff Agreement",1,
+"Which container size is standard for calculating TEU capacity?",multiple_choice,"10 foot container","20 foot container","40 foot container","45 foot high-cube container",2,
+"Demurrage fees are charged when container equipment remains uncollected inside the port terminal past the free days.",boolean,,,,,,1
+"What document is required to certify the country where imported goods were produced?",multiple_choice,"Packing List","Commercial Invoice","Certificate of Origin","Bill of Entry",3,
+"HS Code stands for Harmonized Commodity Description and Coding System.",boolean,,,,,,1
+"Which entity is primarily responsible for clearing goods through national customs authorities?",multiple_choice,"Ship Owner","Customs Broker / Declarant","Stevedore","Underwriter",2,
+"Under EXW (Ex Works), the seller carries the maximum risk and obligation.",boolean,,,,,,0
+"What is the primary function of a Freight Forwarder?",multiple_choice,"Manufacturing goods","Organizing storage and transport of goods on behalf of shippers","Inspecting port machinery","Providing bank loans for international trades",2,
+"An LCL shipment stands for Less than Container Load.",boolean,,,,,,1
+"In sea freight, 'BAF' refers to which additional surcharge?",multiple_choice,"Bunker Adjustment Factor","Basic Air Freight","Bulk Cargo Allowance","Border Access Fee",1,
+"Which document gives details about the weight, dimensions, and contents of each package in a shipment?",multiple_choice,"Bill of Lading","Packing List","Letter of Credit","Customs Bond",2,
+"Dangerous Goods (DG) declarations are governed by IMDG code for maritime transport.",boolean,,,,,,1
+"A Letter of Credit (L/C) is issued by which party in a commercial transaction?",multiple_choice,"The Buyer's Bank","The Carrier","The Port Authority","The Customs Agency",1,
+"Air Waybills (AWB) are negotiable documents of title, just like Ocean Bills of Lading.",boolean,,,,,,0
+"What type of vessel is specifically designed to carry un-packaged bulk cargo like grain, coal, or ore?",multiple_choice,"Ro-Ro Vessel","Container Ship","Bulk Carrier","Feeder Vessel",3,
+"Gross Weight includes the net weight of the goods plus the packaging weight.",boolean,,,,,,1
+"What does 'ETA' commonly stand for in logistics?",multiple_choice,"Estimated Time of Arrival","Exact Transport Agreement","Export Tariff Assessment","Electronic Tracking Access",1,
